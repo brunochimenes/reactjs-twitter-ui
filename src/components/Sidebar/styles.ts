@@ -1,5 +1,5 @@
-import { NavLink as BaseNavLink } from 'react-router-dom'
-import styled from 'styled-components'
+import { NavLink as BaseNavLink } from "react-router-dom";
+import styled from "styled-components";
 
 export const Sidebar = styled.aside`
   padding: 1.5rem 1.25rem;
@@ -12,12 +12,12 @@ export const Sidebar = styled.aside`
     padding: 1.5rem 0.75rem;
     align-items: center;
   }
-`
+`;
 
 export const LogoImg = styled.img`
   width: 2rem;
   height: 2rem;
-`
+`;
 
 export const NewTweet = styled.button`
   background: ${({ theme }) => theme.color.primary};
@@ -44,13 +44,13 @@ export const NewTweet = styled.button`
       display: none;
     }
   }
-`
+`;
 
 export const MainNavigation = styled.nav`
   display: flex;
   flex-direction: column;
   gap: 2rem;
-`
+`;
 
 export const NavLink = styled(BaseNavLink)`
   display: flex;
@@ -69,7 +69,7 @@ export const NavLink = styled(BaseNavLink)`
       display: none;
     }
   }
-`
+`;
 
 export const Link = styled.a`
   display: flex;
@@ -84,4 +84,4 @@ export const Link = styled.a`
       display: none;
     }
   }
-`
+`;

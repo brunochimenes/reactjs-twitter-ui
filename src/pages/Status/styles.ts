@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const AnswerTweetForm = styled.form`
   padding: 1.5rem 1.25rem;
@@ -6,20 +6,20 @@ export const AnswerTweetForm = styled.form`
   align-items: center;
   gap: 0.5rem;
   border-bottom: 1px solid ${({ theme }) => theme.color.border};
-`
+`;
 
 export const TweetLabel = styled.label`
   flex: 1;
   display: flex;
   align-items: center;
   gap: 0.75rem;
-`
+`;
 
 export const Img = styled.img`
   width: 3rem;
   height: 3rem;
   border-radius: 999px;
-`
+`;
 
 export const TweetTextarea = styled.textarea`
   flex: 1;
@@ -42,10 +42,10 @@ export const TweetTextarea = styled.textarea`
   @media (max-width: 700px) {
     font-size: 1rem;
   }
-`
+`;
 
 export const Button = styled.button.attrs({
-  type: 'submit',
+  type: "submit",
 })`
   margin-left: auto;
   background: ${({ theme }) => theme.color.primary};
@@ -71,4 +71,4 @@ export const Button = styled.button.attrs({
       display: none;
     }
   }
-`
+`;

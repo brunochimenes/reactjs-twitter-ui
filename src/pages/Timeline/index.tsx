@@ -1,25 +1,26 @@
-import { FormEvent, KeyboardEvent, useState } from 'react'
+import { FormEvent, KeyboardEvent, useState } from "react";
 
-import { Button, Img, NewTweetForm, TweetLabel, TweetTextarea } from './styles'
+import { Button, Img, NewTweetForm, TweetLabel, TweetTextarea } from "./styles";
 
-import { Separator } from '../../components/Separator'
-import { Tweet } from '../../components/Tweet'
+import { Separator } from "../../components/Separator";
+import { Tweet } from "../../components/Tweet";
 
 export function Timeline() {
-  const [newTweet, setNewTweet] = useState('')
-  const [tweets, setTweets] = useState<string[]>([])
+  const [newTweet, setNewTweet] = useState("");
+  const [tweets, setTweets] = useState<string[]>([]);
 
   function createNewTweet(event: FormEvent) {
-    event.preventDefault()
+    event.preventDefault();
 
-    setTweets([newTweet, ...tweets])
-    setNewTweet('')
+    setTweets([newTweet, ...tweets]);
+    setNewTweet("");
   }
 
   function handleHotKeySubmit(event: KeyboardEvent) {
-    if (event.key === 'Enter' && (event.ctrlKey || event.metaKey)) {
-      setTweets([newTweet, ...tweets])
-      setNewTweet('')
+    if (event.key === "Enter" && (event.ctrlKey || event.metaKey)) {
+      setTweets([newTweet, ...tweets]);
+
+      setNewTweet("");
     }
   }
 
@@ -38,7 +39,7 @@ export function Timeline() {
             value={newTweet}
             onKeyDown={handleHotKeySubmit}
             onChange={(event) => {
-              setNewTweet(event.target.value)
+              setNewTweet(event.target.value);
             }}
           />
         </TweetLabel>
@@ -49,8 +50,8 @@ export function Timeline() {
       <Separator />
 
       {tweets.map((value) => {
-        return <Tweet key={value} content={value} />
+        return <Tweet key={value} content={value} />;
       })}
     </main>
-  )
+  );
 }

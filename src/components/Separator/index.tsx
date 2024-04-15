@@ -1,5 +1,5 @@
-import { Container } from './styles'
+import { Container } from "./styles";
 
 export function Separator() {
-  return <Container />
+  return <Container />;
 }

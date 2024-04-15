@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const Layout = styled.div`
   margin: 0 auto;
@@ -11,9 +11,9 @@ export const Layout = styled.div`
   @media (max-width: 700px) {
     grid-template-columns: 88px 1fr;
   }
-`
+`;
 
 export const Content = styled.div`
   border-left: 1px solid ${({ theme }) => theme.color.border};
   border-right: 1px solid ${({ theme }) => theme.color.border};
-`
+`;

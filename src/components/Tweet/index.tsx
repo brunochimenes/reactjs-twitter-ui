@@ -1,14 +1,14 @@
-import { ArrowsClockwise, ChatCircle, Heart } from '@phosphor-icons/react'
+import { ArrowsClockwise, ChatCircle, Heart } from "@phosphor-icons/react";
 
-import { Button, Container, Content, Footer, Header, Img } from './styles'
+import { Button, Container, Content, Footer, Header, Img } from "./styles";
 
 interface TweetProps {
-  content: string
+  content: string | undefined;
 }
 
 export function Tweet({ content }: TweetProps) {
   return (
-    <Container to="/status">
+    <Container to={`/status/${content}`}>
       <Img src="https://github.com/brunochimenes.png" alt="Bruno Carvalho" />
 
       <Content>
@@ -22,21 +22,21 @@ export function Tweet({ content }: TweetProps) {
 
         <Footer>
           <Button type="button">
-            <ChatCircle width={'1.25rem'} height={'1.25rem'} />
+            <ChatCircle width={"1.25rem"} height={"1.25rem"} />
             20
           </Button>
 
           <Button type="button">
-            <ArrowsClockwise width={'1.25rem'} height={'1.25rem'} />
+            <ArrowsClockwise width={"1.25rem"} height={"1.25rem"} />
             20
           </Button>
 
           <Button type="button">
-            <Heart width={'1.25rem'} height={'1.25rem'} />
+            <Heart width={"1.25rem"} height={"1.25rem"} />
             20
           </Button>
         </Footer>
       </Content>
     </Container>
-  )
+  );
 }

@@ -1,5 +1,6 @@
-import { FormEvent, KeyboardEvent, useState } from 'react'
-import { PaperPlaneRight } from '@phosphor-icons/react'
+import { FormEvent, KeyboardEvent, useState } from "react";
+import { useParams } from "react-router-dom";
+import { PaperPlaneRight } from "@phosphor-icons/react";
 
 import {
   AnswerTweetForm,
@@ -7,32 +8,34 @@ import {
   Img,
   TweetLabel,
   TweetTextarea,
-} from './styles'
+} from "./styles";
 
-import { Separator } from '../../components/Separator'
-import { Tweet } from '../../components/Tweet'
+import { Separator } from "../../components/Separator";
+import { Tweet } from "../../components/Tweet";
 
 export function Status() {
-  const [newAnswer, setNewAnswer] = useState('')
-  const [answers, setAnswers] = useState<string[]>([])
+  const [newAnswer, setNewAnswer] = useState("");
+  const [answers, setAnswers] = useState<string[]>([]);
+
+  const { content } = useParams();
 
   function handleCreateNewAnswer(event: FormEvent) {
-    event.preventDefault()
+    event.preventDefault();
 
-    setAnswers([newAnswer, ...answers])
-    setNewAnswer('')
+    setAnswers([newAnswer, ...answers]);
+    setNewAnswer("");
   }
 
   function handleHotKeySubmit(event: KeyboardEvent) {
-    if (event.key === 'Enter' && (event.ctrlKey || event.metaKey)) {
-      setAnswers([newAnswer, ...answers])
-      setNewAnswer('')
+    if (event.key === "Enter" && (event.ctrlKey || event.metaKey)) {
+      setAnswers([newAnswer, ...answers]);
+      setNewAnswer("");
     }
   }
 
   return (
     <main>
-      <Tweet content="testando" />
+      <Tweet content={content} />
 
       <Separator />
 
@@ -49,7 +52,7 @@ export function Status() {
             value={newAnswer}
             onKeyDown={handleHotKeySubmit}
             onChange={(event) => {
-              setNewAnswer(event.target.value)
+              setNewAnswer(event.target.value);
             }}
           />
         </TweetLabel>
@@ -57,8 +60,8 @@ export function Status() {
         <Button type="submit">
           <PaperPlaneRight
             className="button-icon"
-            width={'1.5rem'}
-            height={'1.5rem'}
+            width={"1.5rem"}
+            height={"1.5rem"}
             display="none"
           />
 
@@ -67,8 +70,8 @@ export function Status() {
       </AnswerTweetForm>
 
       {answers.map((value) => {
-        return <Tweet key={value} content={value} />
+        return <Tweet key={value} content={value} />;
       })}
     </main>
-  )
+  );
 }

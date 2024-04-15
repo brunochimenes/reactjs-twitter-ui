@@ -1,22 +1,22 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const NewTweetForm = styled.form`
   padding: 1.5rem 1.25rem;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-`
+`;
 
 export const TweetLabel = styled.label`
   display: flex;
   gap: 0.75rem;
-`
+`;
 
 export const Img = styled.img`
   width: 3rem;
   height: 3rem;
   border-radius: 999px;
-`
+`;
 
 export const TweetTextarea = styled.textarea`
   flex: 1;
@@ -35,10 +35,10 @@ export const TweetTextarea = styled.textarea`
   &::placeholder {
     color: ${({ theme }) => theme.color.text};
   }
-`
+`;
 
 export const Button = styled.button.attrs({
-  type: 'submit',
+  type: "submit",
 })`
   margin-left: auto;
   background: ${({ theme }) => theme.color.primary};
@@ -52,4 +52,4 @@ export const Button = styled.button.attrs({
   &:hover {
     filter: brightness(0.9);
   }
-`
+`;

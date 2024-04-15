@@ -1,23 +1,23 @@
-import { Sun, Moon } from '@phosphor-icons/react'
-import { useTheme } from 'styled-components'
-import Switch from 'react-switch'
+import { Sun, Moon } from "@phosphor-icons/react";
+import { useTheme } from "styled-components";
+import Switch from "react-switch";
 
-import { Container } from './styles'
+import { Container } from "./styles";
 
 interface HeaderProps {
-  title: string
-  toggleTheme: () => void
+  title: string;
+  toggleTheme: () => void;
 }
 
 export function Header({ title, toggleTheme }: HeaderProps) {
-  const theme = useTheme()
+  const theme = useTheme();
 
   return (
     <Container className="header">
       {title}
 
       <Switch
-        checked={theme.title === 'dark'}
+        checked={theme.title === "dark"}
         onChange={toggleTheme}
         checkedIcon={false}
         uncheckedIcon={false}
@@ -33,5 +33,5 @@ export function Header({ title, toggleTheme }: HeaderProps) {
         activeBoxShadow={`0 0 10px 1px ${theme.color.primary}`}
       />
     </Container>
-  )
+  );
 }

@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const Container = styled(Link)`
   padding: 1.5rem 1.25rem;
@@ -9,19 +9,19 @@ export const Container = styled(Link)`
   gap: 0.75rem;
   border-bottom: 1px solid ${({ theme }) => theme.color.border};
   text-decoration: none;
-`
+`;
 
 export const Img = styled.img`
   width: 3rem;
   height: 3rem;
   border-radius: 9999px;
-`
+`;
 
 export const Content = styled.div`
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-`
+`;
 
 export const Header = styled.div`
   display: flex;
@@ -32,14 +32,14 @@ export const Header = styled.div`
     font-size: 0.875rem;
     color: #89a2b8;
   }
-`
+`;
 
 export const Footer = styled.div`
   display: flex;
   align-items: center;
   gap: 3rem;
   margin-top: 0.75rem;
-`
+`;
 
 export const Button = styled.button`
   display: flex;
@@ -53,4 +53,4 @@ export const Button = styled.button`
   &:hover {
     color: ${({ theme }) => theme.color.primary};
   }
-`
+`;
