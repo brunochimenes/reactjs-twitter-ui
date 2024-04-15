@@ -21,7 +21,7 @@ O projeto foi desenvolvido durante a masterclass gratuita de React com objetivo 
 ## 📱 Demo
 
 <p align="center">
-<img width='700' height='500' alt="Demo" src="/.github/assets/demo.gif" />  
+<img width='600' height='500' alt="Demo" src="/.github/assets/demo.gif" />  
 </p>
 
 <a href="https://www.figma.com/community/file/1202694130789327431/twitter-ui">
